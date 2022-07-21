@@ -22,7 +22,7 @@ class ProductRepository
                 ->fetch();
 
             if (empty($arProduct)) {
-                throw new RuntimeException('Товар с кодом "' . $code . '" не найден');
+                throw new RuntimeException('РўРѕРІР°СЂ СЃ РєРѕРґРѕРј "' . $code . '" РЅРµ РЅР°Р№РґРµРЅ');
             }
 
             $this->identityMap[$code] = new Product($code, $arProduct['NAME']);
@@ -33,6 +33,6 @@ class ProductRepository
 
     public function commit(): void
     {
-        // сохраняет только изменения
+        // СЃРѕС…СЂР°РЅСЏРµС‚ С‚РѕР»СЊРєРѕ РёР·РјРµРЅРµРЅРёСЏ
     }
 }
